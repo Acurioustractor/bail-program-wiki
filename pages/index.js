@@ -14,12 +14,12 @@ export default function Home(props) {
     data: props.data,
   })
   
-  // Use static data for now (TinaCMS integration will be added gradually)
-  const sections = staticData.sections
-  const voices = staticData.voices
-  const media = staticData.media
-  const partners = staticData.partners
-  const settings = staticSettings
+  // Use file-based content if available, otherwise fall back to static data
+  const sections = props.sections?.length > 0 ? props.sections : staticData.sections
+  const voices = props.voices?.length > 0 ? props.voices : staticData.voices
+  const media = props.media?.length > 0 ? props.media : staticData.media
+  const partners = props.partners?.length > 0 ? props.partners : staticData.partners
+  const settings = props.settings || staticSettings
 
   return (
     <WikiLayout 
@@ -39,25 +39,54 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
+  // Import content functions dynamically
+  const { getVoices, getPartners, getMedia, getSections, getSettings } = await import('../lib/content')
+  
   try {
     // Try to get data from TinaCMS
     const tinaProps = await client.queries.postConnection()
+    
+    // Also load file-based content as fallback
+    const voices = getVoices()
+    const partners = getPartners()
+    const media = getMedia()
+    const sections = getSections()
+    const settings = getSettings()
     
     return {
       props: {
         data: tinaProps.data,
         query: tinaProps.query,
         variables: tinaProps.variables,
+        // Add file-based content
+        voices,
+        partners,
+        media,
+        sections,
+        settings,
       },
     }
   } catch (error) {
-    // Fallback if TinaCMS isn't available
-    console.log('TinaCMS not available, using static data')
+    // Fallback to file-based content if TinaCMS isn't available
+    console.log('TinaCMS not available, using file-based content')
+    
+    const voices = getVoices()
+    const partners = getPartners()
+    const media = getMedia()
+    const sections = getSections()
+    const settings = getSettings()
+    
     return {
       props: {
         data: {},
         query: '',
         variables: {},
+        // Use file-based content
+        voices,
+        partners,
+        media,
+        sections,
+        settings,
       },
     }
   }

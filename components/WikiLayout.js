@@ -237,7 +237,7 @@ export default function WikiLayout({ children, activeSection, setActiveSection, 
           <SidebarTitle>🛠️ Tools</SidebarTitle>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <a 
-              href="/edit"
+              href="/editor"
               style={{
                 background: '#8B4513',
                 color: 'white',

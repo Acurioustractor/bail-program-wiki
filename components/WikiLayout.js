@@ -235,7 +235,36 @@ export default function WikiLayout({ children, activeSection, setActiveSection, 
         
         <Tools>
           <SidebarTitle>🛠️ Tools</SidebarTitle>
-          <p>Quick Actions</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <a 
+              href="/edit"
+              style={{
+                background: '#8B4513',
+                color: 'white',
+                padding: '0.5rem',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                textAlign: 'center',
+                fontSize: '0.9rem'
+              }}
+            >
+              ✏️ Edit Content
+            </a>
+            <a 
+              href="/admin"
+              style={{
+                background: '#6c757d',
+                color: 'white',
+                padding: '0.5rem',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                textAlign: 'center',
+                fontSize: '0.9rem'
+              }}
+            >
+              ⚙️ Admin
+            </a>
+          </div>
         </Tools>
       </MainLayout>
     </WikiContainer>

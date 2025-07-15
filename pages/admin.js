@@ -1,12 +1,7 @@
-import { TinaCMS } from 'tinacms'
+import dynamic from "next/dynamic";
+
+const TinaAdmin = dynamic(() => import("tinacms/dist/admin"), { ssr: false });
 
 export default function AdminPage() {
-  return (
-    <div>
-      <h1>TinaCMS Admin</h1>
-      <p>Loading admin interface...</p>
-    </div>
-  )
+  return <TinaAdmin />;
 }
-
-// This page will be replaced by TinaCMS at build time

@@ -29,7 +29,7 @@ export default function Home() {
   )
 }
 
-// Static data fallback with all rich content
+// EXACT content from original HTML file - bail-program-wiki-full.html
 const staticData = {
   sections: [
     {
@@ -37,24 +37,23 @@ const staticData = {
       title: 'Program Overview',
       sectionId: 'program-overview',
       stats: [
-        { number: '10', label: 'Camps Conducted' },
-        { number: '400', label: 'Young Indigenous Men Impacted' },
-        { number: '4', label: 'Years Proven Track Record' },
-        { number: '$200k', label: 'Total Project Investment' }
+        { number: '10', label: 'Camps Conducted\nAcross 5 Locations' },
+        { number: '400', label: 'Young Indigenous Men\nDirectly Impacted' },
+        { number: '4 Years', label: 'Proven Track Record\nof Success' },
+        { number: '$200k', label: 'Total Project Investment\n(2025 Initiative)' }
       ],
       content: {
         type: 'root',
         children: [
           {
             type: 'h1',
-            children: [{ type: 'text', text: 'BAIL Program - Be An Indigenous Leader' }]
+            children: [{ type: 'text', text: '🎯 Mission Statement' }]
           },
           {
             type: 'p',
             children: [
-              { type: 'text', text: 'The ', bold: true },
-              { type: 'text', text: 'BAIL (Be An Indigenous Leader) Program', bold: true },
-              { type: 'text', text: ' is delivered through the innovative CAMPFIRE model - a transformative approach to addressing youth crime and disconnection among Aboriginal and Torres Strait Islander young people in Mount Isa and Doomadgee.' }
+              { type: 'text', text: 'The BAIL (Be An Indigenous Leader) Program', bold: true },
+              { type: 'text', text: ', delivered through the innovative CAMPFIRE model, represents a transformative approach to addressing youth crime and disconnection among Aboriginal and Torres Strait Islander young people in Mount Isa and Doomadgee.' }
             ]
           },
           {
@@ -63,24 +62,51 @@ const staticData = {
           },
           {
             type: 'h2',
-            children: [{ type: 'text', text: 'Impact & Achievements' }]
-          },
-          {
-            type: 'ul',
-            children: [
-              { type: 'li', children: [{ type: 'text', text: '10 Camps Conducted across 5 locations' }] },
-              { type: 'li', children: [{ type: 'text', text: '400 Young Indigenous Men directly impacted' }] },
-              { type: 'li', children: [{ type: 'text', text: '4 Years proven track record of success' }] },
-              { type: 'li', children: [{ type: 'text', text: '$200k Total Project Investment (2025 Initiative)' }] }
-            ]
-          },
-          {
-            type: 'h2',
-            children: [{ type: 'text', text: 'Video Content' }]
+            children: [{ type: 'text', text: '🔥 The CAMPFIRE Model' }]
           },
           {
             type: 'p',
-            children: [{ type: 'text', text: '🎬 Brodie\'s Story - Program Introduction: "Brodie shares his vision for the BAIL Program and the importance of connection to Country"' }]
+            children: [{ type: 'text', text: 'Our innovative framework combines eight key elements that work together to create transformative experiences for young Indigenous people.' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'C - Culture: Deep immersion in traditional practices' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'A - Ancestral Wisdom: Learning from Elders' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'M - Mentoring: One-on-one guidance' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'P - Personal Growth: Individual development' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'F - Fitness: Physical foundation' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'I - Identity: Cultural identity' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'R - Resilience: Overcoming challenges' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'E - Empowerment: Leadership development' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: '📺 Brodie\'s Story - Program Introduction' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Brodie shares his vision for the BAIL Program and the importance of connection to Country.' }]
           }
         ]
       }
@@ -179,6 +205,86 @@ const staticData = {
           {
             type: 'p',
             children: [{ type: 'text', text: 'Sustainable lifestyle changes, community leadership roles, cultural ambassadorship, mentoring other young people.' }]
+          }
+        ]
+      }
+    },
+    // Community Voices section - matches original HTML voices section
+    {
+      id: 'community-voices',
+      title: 'Community Voices & Insights',
+      sectionId: 'community-voices',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: 'Community Voices & Insights' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'The BAIL Program is driven by the voices and experiences of our community. Here you will find perspectives from Elders who guide us, young people who have been transformed, and families who have witnessed the change.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: '👴 Elder Wisdom & Guidance' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: '👦 Youth Perspectives' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'See all community voices in the sidebar sections for Elder Voices, Youth Perspectives, Family Impacts, and Success Stories.' }]
+          }
+        ]
+      }
+    },
+    // Network & Partners section - matches original HTML network section  
+    {
+      id: 'network-partners',
+      title: 'Network & Partners',
+      sectionId: 'network-partners',
+      stats: [
+        { number: '$100k', label: 'Youth Development\nPartnership Fund' },
+        { number: '$32k', label: 'Queensland\nGambling Grant' },
+        { number: '$68k', label: 'In-kind & Partner\nContributions' },
+        { number: '$200k', label: 'Total Project\nInvestment' }
+      ],
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: 'Network & Partners' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'The BAIL Program is strengthened by a diverse network of community leaders, organizations, and cultural advisors who work together to support young Indigenous people.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: '🤝 Brodie\'s Core Team' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'Brodie Germaine - Program Founder & Director' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Indigenous fitness trainer, community leader, and visionary behind the BAIL Program. Expertise in Indigenous Leadership, Youth Mentoring, and Cultural Connection.' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'Benjamin Knight - Program Coordinator' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Strategic coordinator supporting program implementation and community engagement with expertise in Program Coordination and Strategic Planning.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: '💰 Funding Partners' }]
           }
         ]
       }
@@ -356,24 +462,6 @@ const staticData = {
           {
             type: 'p',
             children: [{ type: 'text', text: 'Access important program materials, research, and resources.' }]
-          }
-        ]
-      }
-    },
-    {
-      id: 'network-partners',
-      title: 'Network Partners',
-      sectionId: 'network-partners',
-      content: {
-        type: 'root',
-        children: [
-          {
-            type: 'h1',
-            children: [{ type: 'text', text: '🤝 Our Network Partners' }]
-          },
-          {
-            type: 'p',
-            children: [{ type: 'text', text: 'Meet the dedicated team members and collaborators who make the BAIL Program possible.' }]
           }
         ]
       }

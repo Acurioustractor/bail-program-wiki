@@ -136,26 +136,44 @@ const MobileMenuBtn = styled.button`
   }
 `
 
-const menuItems = [
-  { id: 'program-overview', label: 'Program Overview', icon: '🏕️' },
-  { id: 'campfire-model', label: 'CAMPFIRE Model', icon: '🔥' },
-  { id: 'impact-stats', label: 'Impact Statistics', icon: '📊' },
-  { id: 'elder-voices', label: 'Elder Voices', icon: '👵' },
-  { id: 'youth-perspectives', label: 'Youth Perspectives', icon: '🧑' },
-  { id: 'family-impacts', label: 'Family Impacts', icon: '👨‍👩‍👧‍👦' },
-  { id: 'success-stories', label: 'Success Stories', icon: '⭐' },
-  { id: 'video-gallery', label: 'Video Gallery', icon: '🎥' },
-  { id: 'photo-gallery', label: 'Photo Gallery', icon: '📷' },
-  { id: 'audio-stories', label: 'Audio Stories', icon: '🎵' },
-  { id: 'documents', label: 'Documents', icon: '📄' },
-  { id: 'network-partners', label: 'Network Partners', icon: '🤝' },
-  { id: 'community-partners', label: 'Community Partners', icon: '🏘️' },
-  { id: 'funding-partners', label: 'Funding Partners', icon: '💰' },
-  { id: 'cultural-advisors', label: 'Cultural Advisors', icon: '🌟' },
-  { id: 'current-programs', label: 'Current Programs', icon: '🎯' },
-  { id: 'upcoming-camps', label: 'Upcoming Camps', icon: '📅' },
-  { id: 'locations', label: 'Locations', icon: '📍' },
-  { id: 'evaluation', label: 'Evaluation', icon: '📈' }
+// EXACT menu structure from original HTML - organized by sections
+const menuSections = [
+  {
+    title: "Program Overview",
+    items: [
+      { id: 'program-overview', label: 'Program Overview', icon: '🎯' },
+      { id: 'campfire-model', label: 'CAMPFIRE Model', icon: '🔥' },
+      { id: 'impact-stats', label: 'Impact & Statistics', icon: '📊' }
+    ]
+  },
+  {
+    title: "Community Stories", 
+    items: [
+      { id: 'community-voices', label: 'Community Voices', icon: '👴' },
+      { id: 'elder-voices', label: 'Elder Voices', icon: '👴' },
+      { id: 'youth-perspectives', label: 'Youth Perspectives', icon: '👦' },
+      { id: 'family-impacts', label: 'Family Impacts', icon: '👨‍👩‍👧‍👦' },
+      { id: 'success-stories', label: 'Success Stories', icon: '🌟' }
+    ]
+  },
+  {
+    title: "Media & Documentation",
+    items: [
+      { id: 'video-gallery', label: 'Video Gallery', icon: '📹' },
+      { id: 'photo-gallery', label: 'Photo Gallery', icon: '📸' },
+      { id: 'audio-stories', label: 'Audio Stories', icon: '🎤' },
+      { id: 'documents', label: 'Documents', icon: '📄' }
+    ]
+  },
+  {
+    title: "Network & Partners",
+    items: [
+      { id: 'network-partners', label: 'Brodie\'s Network', icon: '🤝' },
+      { id: 'community-partners', label: 'Community Partners', icon: '🏘️' },
+      { id: 'funding-partners', label: 'Funding Partners', icon: '💰' },
+      { id: 'cultural-advisors', label: 'Cultural Advisors', icon: '🏛️' }
+    ]
+  }
 ]
 
 export default function WikiLayout({ children, activeSection, setActiveSection, settings }) {
@@ -180,22 +198,35 @@ export default function WikiLayout({ children, activeSection, setActiveSection, 
       <MainLayout>
         <Sidebar isOpen={sidebarOpen}>
           <SidebarTitle>📚 Wiki Navigation</SidebarTitle>
-          <NavList>
-            {menuItems.map(item => (
-              <NavItem key={item.id}>
-                <NavLink
-                  active={activeSection === item.id}
-                  onClick={() => {
-                    setActiveSection(item.id)
-                    setSidebarOpen(false)
-                  }}
-                >
-                  <span>{item.icon}</span>
-                  {item.label}
-                </NavLink>
-              </NavItem>
-            ))}
-          </NavList>
+          {menuSections.map(section => (
+            <div key={section.title} style={{ marginBottom: '1.5rem' }}>
+              <h4 style={{ 
+                fontSize: '0.9rem', 
+                fontWeight: '600', 
+                color: '#8B4513', 
+                marginBottom: '0.5rem',
+                padding: '0 0.5rem'
+              }}>
+                {section.title}
+              </h4>
+              <NavList>
+                {section.items.map(item => (
+                  <NavItem key={item.id}>
+                    <NavLink
+                      active={activeSection === item.id}
+                      onClick={() => {
+                        setActiveSection(item.id)
+                        setSidebarOpen(false)
+                      }}
+                    >
+                      <span>{item.icon}</span>
+                      {item.label}
+                    </NavLink>
+                  </NavItem>
+                ))}
+              </NavList>
+            </div>
+          ))}
         </Sidebar>
         
         <ContentArea>

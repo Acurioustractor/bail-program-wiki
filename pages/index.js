@@ -36,45 +36,51 @@ const staticData = {
       id: 'program-overview',
       title: 'Program Overview',
       sectionId: 'program-overview',
+      stats: [
+        { number: '10', label: 'Camps Conducted' },
+        { number: '400', label: 'Young Indigenous Men Impacted' },
+        { number: '4', label: 'Years Proven Track Record' },
+        { number: '$200k', label: 'Total Project Investment' }
+      ],
       content: {
         type: 'root',
         children: [
           {
             type: 'h1',
-            children: [{ type: 'text', text: 'Welcome to the BAIL Program' }]
+            children: [{ type: 'text', text: 'BAIL Program - Be An Indigenous Leader' }]
           },
           {
             type: 'p',
             children: [
-              { type: 'text', text: 'The ' },
-              { type: 'text', text: 'Be An Indigenous Leader (BAIL) Program', bold: true },
-              { type: 'text', text: ' is a transformative 10-day wilderness camp experience designed specifically for Indigenous youth aged 12-17. Rooted in the ' },
-              { type: 'text', text: 'CAMPFIRE', bold: true },
-              { type: 'text', text: ' strategic framework, our program combines traditional Indigenous knowledge with modern leadership development to create lasting positive change in participants lives.' }
+              { type: 'text', text: 'The ', bold: true },
+              { type: 'text', text: 'BAIL (Be An Indigenous Leader) Program', bold: true },
+              { type: 'text', text: ' is delivered through the innovative CAMPFIRE model - a transformative approach to addressing youth crime and disconnection among Aboriginal and Torres Strait Islander young people in Mount Isa and Doomadgee.' }
             ]
           },
           {
-            type: 'h2',
-            children: [{ type: 'text', text: 'Our Mission' }]
-          },
-          {
             type: 'p',
-            children: [{ type: 'text', text: 'To empower Indigenous youth through culturally-grounded leadership development, fostering resilience, identity, and community connection in a supportive wilderness environment.' }]
+            children: [{ type: 'text', text: 'Led by Brodie Germaine Fitness (BG Fit), this culturally-grounded initiative combines the healing power of Country with fitness, mentoring, and Elder guidance to break cycles of disadvantage and empower young Indigenous leaders.' }]
           },
           {
             type: 'h2',
-            children: [{ type: 'text', text: 'Program Highlights' }]
+            children: [{ type: 'text', text: 'Impact & Achievements' }]
           },
           {
             type: 'ul',
             children: [
-              { type: 'li', children: [{ type: 'text', text: '10-day intensive wilderness experience' }] },
-              { type: 'li', children: [{ type: 'text', text: 'Cultural immersion and traditional teachings' }] },
-              { type: 'li', children: [{ type: 'text', text: 'Leadership skill development' }] },
-              { type: 'li', children: [{ type: 'text', text: 'Physical fitness and outdoor activities' }] },
-              { type: 'li', children: [{ type: 'text', text: 'Mentorship with Indigenous leaders' }] },
-              { type: 'li', children: [{ type: 'text', text: 'Family and community involvement' }] }
+              { type: 'li', children: [{ type: 'text', text: '10 Camps Conducted across 5 locations' }] },
+              { type: 'li', children: [{ type: 'text', text: '400 Young Indigenous Men directly impacted' }] },
+              { type: 'li', children: [{ type: 'text', text: '4 Years proven track record of success' }] },
+              { type: 'li', children: [{ type: 'text', text: '$200k Total Project Investment (2025 Initiative)' }] }
             ]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Video Content' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: '🎬 Brodie\'s Story - Program Introduction: "Brodie shares his vision for the BAIL Program and the importance of connection to Country"' }]
           }
         ]
       }
@@ -187,11 +193,19 @@ const staticData = {
         children: [
           {
             type: 'h1',
-            children: [{ type: 'text', text: '👵 Elder Wisdom & Guidance' }]
+            children: [{ type: 'text', text: '👴 Elder Wisdom & Guidance' }]
           },
           {
             type: 'p',
             children: [{ type: 'text', text: 'Our Elders provide the cultural foundation and wisdom that guides everything we do. Their voices carry the authority of tradition and the power of lived experience. They are the cornerstone of our program cultural integrity.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Video Content' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: '📺 Elder Voices - Cultural Wisdom: "Cultural teachings and traditional wisdom"' }]
           }
         ]
       }
@@ -245,7 +259,31 @@ const staticData = {
           },
           {
             type: 'p',
-            children: [{ type: 'text', text: 'Every youth who participates in the BAIL Program has a unique story of growth, resilience, and achievement.' }]
+            children: [{ type: 'text', text: 'These are the stories that inspire us to continue this work. Each success story represents not just one young person transformation, but the ripple effect that touches families, communities, and future generations.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Thomas C. - From Custody to Community Leader' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Age 17, Program Graduate: "Thomas entered the program while on remand, facing serious charges. Through intensive cultural connection and mentoring, he discovered his passion for traditional arts. Today, he is completing Year 12, teaching younger kids traditional crafts, and has had no further contact with police for 18 months."' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Amy S. - Breaking the Cycle' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Age 16, Youth Mentor: "Amy came from a family with a three-generation history of incarceration. The BAIL Program connected her with strong female Elders who became her cultural mothers. She is now studying to become a youth worker and mentors other at-risk girls in her community."' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Jake W. - Finding Purpose Through Culture' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Age 18, Cultural Guide: "Jake struggled with substance abuse and had been expelled from school. The camps taught him traditional hunting and navigation skills. He is now sober, works as a cultural guide for tourists, and is training to become a ranger on Country."' }]
           }
         ]
       }

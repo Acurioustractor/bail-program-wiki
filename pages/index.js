@@ -30,7 +30,7 @@ export default function Home() {
 }
 
 // EXACT content from original HTML file - bail-program-wiki-full.html
-const staticData = {
+export const staticData = {
   sections: [
     {
       id: 'program-overview',
@@ -767,7 +767,7 @@ const staticData = {
   ]
 }
 
-const staticSettings = {
+export const staticSettings = {
   siteTitle: 'BAIL Program Wiki',
   siteSubtitle: 'Be An Indigenous Leader Program'
 }

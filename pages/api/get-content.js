@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+// Import the actual data directly instead of parsing files
+import { staticData } from '../index.js'
 
 export default function handler(req, res) {
   if (req.method !== 'GET') {
@@ -9,30 +9,15 @@ export default function handler(req, res) {
   try {
     const { sectionId } = req.query
     
-    // Read the current index.js file
-    const filePath = path.join(process.cwd(), 'pages', 'index.js')
-    let fileContent = fs.readFileSync(filePath, 'utf8')
+    // Find the section in staticData
+    const section = staticData.sections.find(s => s.id === sectionId)
     
-    // Extract staticData from the file
-    const staticDataMatch = fileContent.match(/const staticData = (\{[\s\S]*?\n\}\n)/m)
-    if (!staticDataMatch) {
-      return res.status(500).json({ message: 'Could not find staticData' })
-    }
-    
-    // This is a simple approach - in production you'd want a proper parser
-    const staticDataString = staticDataMatch[1]
-    
-    // Find the specific section
-    const sectionRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*'${sectionId}'[\\s\\S]*?\\}(?=,\\s*\\{|\\s*\\])`);
-    const sectionMatch = staticDataString.match(sectionRegex)
-    
-    if (!sectionMatch) {
+    if (!section) {
       return res.status(404).json({ message: 'Section not found' })
     }
     
-    // Convert the content structure back to markdown-like format
-    const sectionData = sectionMatch[0]
-    let markdownContent = convertToMarkdown(sectionData)
+    // Convert the content structure to markdown
+    let markdownContent = convertToMarkdown(section)
     
     res.status(200).json({ content: markdownContent })
   } catch (error) {
@@ -41,45 +26,56 @@ export default function handler(req, res) {
   }
 }
 
-function convertToMarkdown(sectionData) {
-  // Extract content from the section structure
+function convertToMarkdown(section) {
   const lines = []
   
-  // Simple regex to extract text content
-  const h1Matches = sectionData.match(/type:\s*'h1'[\s\S]*?text:\s*'([^']+)'/g)
-  const h2Matches = sectionData.match(/type:\s*'h2'[\s\S]*?text:\s*'([^']+)'/g)  
-  const h3Matches = sectionData.match(/type:\s*'h3'[\s\S]*?text:\s*'([^']+)'/g)
-  const pMatches = sectionData.match(/type:\s*'p'[\s\S]*?text:\s*'([^']+)'/g)
+  if (!section.content || !section.content.children) {
+    return `# ${section.title}\n\nNo content found for this section.`
+  }
   
-  // This is a simplified approach - you'd want better parsing in production
-  if (h1Matches) {
-    h1Matches.forEach(match => {
-      const text = match.match(/text:\s*'([^']+)'/)[1]
+  // Process each content element
+  section.content.children.forEach(element => {
+    if (element.type === 'h1') {
+      const text = extractText(element.children)
       lines.push(`# ${text}`)
-    })
-  }
-  
-  if (h2Matches) {
-    h2Matches.forEach(match => {
-      const text = match.match(/text:\s*'([^']+)'/)[1]
+      lines.push('')
+    } else if (element.type === 'h2') {
+      const text = extractText(element.children)
       lines.push(`## ${text}`)
-    })
-  }
-  
-  if (h3Matches) {
-    h3Matches.forEach(match => {
-      const text = match.match(/text:\s*'([^']+)'/)[1]
+      lines.push('')
+    } else if (element.type === 'h3') {
+      const text = extractText(element.children)
       lines.push(`### ${text}`)
-    })
-  }
-  
-  if (pMatches) {
-    pMatches.forEach(match => {
-      const text = match.match(/text:\s*'([^']+)'/)[1]
+      lines.push('')
+    } else if (element.type === 'p') {
+      const text = extractText(element.children)
       lines.push(text)
-      lines.push('') // Empty line after paragraphs
+      lines.push('')
+    }
+  })
+  
+  // Add stats if they exist
+  if (section.stats && section.stats.length > 0) {
+    lines.push('## Key Statistics')
+    lines.push('')
+    section.stats.forEach(stat => {
+      lines.push(`- **${stat.number}** ${stat.label.replace(/\n/g, ' ')}`)
     })
+    lines.push('')
   }
   
-  return lines.join('\n')
+  return lines.join('\n').trim()
+}
+
+function extractText(children) {
+  if (!children || !Array.isArray(children)) {
+    return ''
+  }
+  
+  return children.map(child => {
+    if (child.type === 'text') {
+      return child.text || ''
+    }
+    return ''
+  }).join('')
 }

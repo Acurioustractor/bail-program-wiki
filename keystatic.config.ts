@@ -7,7 +7,6 @@ export default config({
       owner: process.env.KEYSTATIC_GITHUB_REPO_OWNER || 'Acurioustractor',
       name: process.env.KEYSTATIC_GITHUB_REPO_NAME || 'bail-program-wiki',
     },
-    token: process.env.KEYSTATIC_GITHUB_TOKEN,
   },
   
   collections: {

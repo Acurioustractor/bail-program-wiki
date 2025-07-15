@@ -1,24 +1,16 @@
 import { useState } from 'react'
-import { client } from '../tina/__generated__/client'
-import { useTina } from 'tinacms/dist/react'
 import WikiLayout from '../components/WikiLayout'
 import Section from '../components/Section'
 
-export default function Home(props) {
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  })
-  
+export default function Home() {
   const [activeSection, setActiveSection] = useState('program-overview')
   
-  // Get all sections from data, fallback to static data
-  const sections = data?.sectionConnection?.edges?.map(edge => edge.node) || staticData.sections
-  const voices = data?.voiceConnection?.edges?.map(edge => edge.node) || staticData.voices
-  const media = data?.mediaConnection?.edges?.map(edge => edge.node) || staticData.media
-  const partners = data?.partnerConnection?.edges?.map(edge => edge.node) || staticData.partners
-  const settings = data?.settingsConnection?.edges?.[0]?.node || staticSettings
+  // Use static data for now
+  const sections = staticData.sections
+  const voices = staticData.voices
+  const media = staticData.media
+  const partners = staticData.partners
+  const settings = staticSettings
 
   return (
     <WikiLayout 
@@ -365,27 +357,4 @@ const staticSettings = {
   siteSubtitle: 'Be An Indigenous Leader Program'
 }
 
-export const getStaticProps = async () => {
-  // For now, just return static data until TinaCMS is properly configured
-  return {
-    props: {
-      data: {
-        sectionConnection: { 
-          edges: staticData.sections.map(section => ({ node: section }))
-        },
-        voiceConnection: { 
-          edges: staticData.voices.map(voice => ({ node: voice }))
-        },
-        mediaConnection: { 
-          edges: staticData.media.map(item => ({ node: item }))
-        },
-        partnerConnection: { 
-          edges: staticData.partners.map(partner => ({ node: partner }))
-        },
-        settingsConnection: { 
-          edges: [{ node: staticSettings }]
-        }
-      }
-    }
-  }
-}
+// Remove getStaticProps for now to avoid any issues

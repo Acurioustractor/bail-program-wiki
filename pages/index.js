@@ -58,7 +58,7 @@ const staticData = {
               { type: 'text', text: 'Be An Indigenous Leader (BAIL) Program', bold: true },
               { type: 'text', text: ' is a transformative 10-day wilderness camp experience designed specifically for Indigenous youth aged 12-17. Rooted in the ' },
               { type: 'text', text: 'CAMPFIRE', bold: true },
-              { type: 'text', text: ' strategic framework, our program combines traditional Indigenous knowledge with modern leadership development to create lasting positive change in participants\' lives.' }
+              { type: 'text', text: ' strategic framework, our program combines traditional Indigenous knowledge with modern leadership development to create lasting positive change in participants lives.' }
             ]
           },
           {
@@ -198,7 +198,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'Country teaches what no classroom can. When these young fellas come out bush with us, they start to understand who they are. The land holds our stories, our laws, our healing. This program, it\'s bringing our kids home to themselves.' }]
+            children: [{ type: 'text', text: 'Country teaches what no classroom can. When these young fellas come out bush with us, they start to understand who they are. The land holds our stories, our laws, our healing. This program, it is bringing our kids home to themselves.' }]
           }
         ]
       }
@@ -213,7 +213,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'These young ones, they\'ve been lost in the whitefella world. But when they sit by the fire, listen to the old stories, learn the old ways - that\'s when the healing starts. Brodie, he understands this. He\'s doing good work.' }]
+            children: [{ type: 'text', text: 'These young ones, they have been lost in the whitefella world. But when they sit by the fire, listen to the old stories, learn the old ways - that is when the healing starts. Brodie, he understands this. He is doing good work.' }]
           }
         ]
       }
@@ -244,7 +244,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'Before this program, I was angry all the time. Didn\'t know where I belonged. Now I know my mob, my country. Brodie showed me I can be strong without hurting people. I want to help other kids like me now.' }]
+            children: [{ type: 'text', text: 'Before this program, I was angry all the time. Did not know where I belonged. Now I know my mob, my country. Brodie showed me I can be strong without hurting people. I want to help other kids like me now.' }]
           }
         ]
       }
@@ -259,7 +259,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'I was in and out of trouble for years. The camps changed everything. Learning to fish with Uncle, hearing the stories around the fire, training with Brodie - it all made sense. Now I\'m helping run the program for other kids.' }]
+            children: [{ type: 'text', text: 'I was in and out of trouble for years. The camps changed everything. Learning to fish with Uncle, hearing the stories around the fire, training with Brodie - it all made sense. Now I am helping run the program for other kids.' }]
           }
         ]
       }
@@ -274,7 +274,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'My family was worried about me getting into gangs. The camp showed me there\'s another way to be tough - through culture, through fitness, through helping your people. I\'m proud of who I am now.' }]
+            children: [{ type: 'text', text: 'My family was worried about me getting into gangs. The camp showed me there is another way to be tough - through culture, through fitness, through helping your people. I am proud of who I am now.' }]
           }
         ]
       }
@@ -290,7 +290,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'I didn\'t know my son anymore before this program. He was angry, getting into trouble. After the camps, he started talking to me again, helping around the house. He found himself out there on Country.' }]
+            children: [{ type: 'text', text: 'I did not know my son anymore before this program. He was angry, getting into trouble. After the camps, he started talking to me again, helping around the house. He found himself out there on Country.' }]
           }
         ]
       }
@@ -305,7 +305,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'This program gives our kids what we sometimes can\'t - connection to their culture in a strong, positive way. Brodie and the Elders, they\'re doing what we all wish we could do for our young people.' }]
+            children: [{ type: 'text', text: 'This program gives our kids what we sometimes cannot - connection to their culture in a strong, positive way. Brodie and the Elders, they are doing what we all wish we could do for our young people.' }]
           }
         ]
       }
@@ -320,7 +320,7 @@ const staticData = {
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'My grandson came back from camp different. He wanted to learn language, asked me about the old stories. For the first time in years, he was proud to be blackfella. That\'s worth everything.' }]
+            children: [{ type: 'text', text: 'My grandson came back from camp different. He wanted to learn language, asked me about the old stories. For the first time in years, he was proud to be blackfella. That is worth everything.' }]
           }
         ]
       }

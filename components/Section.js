@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TinaMarkdown } from 'tinacms/dist/rich-text'
+import ReactMarkdown from 'react-markdown'
 
 const SectionContainer = styled.div`
   max-width: 100%;
@@ -270,7 +270,13 @@ export default function Section({ activeSection, sections, voices, media, partne
             <div className="name">{voice.name}</div>
             <div className="role">{voice.role}</div>
             <div className="quote">
-              <TinaMarkdown content={voice.quote} />
+              {typeof voice.quote === 'string' ? (
+                <ReactMarkdown>{voice.quote}</ReactMarkdown>
+              ) : typeof voice.content === 'string' ? (
+                <ReactMarkdown>{voice.content}</ReactMarkdown>
+              ) : (
+                <ReactMarkdown>{voice.quote || voice.content}</ReactMarkdown>
+              )}
             </div>
           </VoiceCard>
         ))}
@@ -295,7 +301,15 @@ export default function Section({ activeSection, sections, voices, media, partne
             <div className="content">
               <h4>{item.title}</h4>
               <div className="type">{item.type}</div>
-              <div className="description">{item.description}</div>
+              <div className="description">
+                {typeof item.description === 'string' ? (
+                  <ReactMarkdown>{item.description}</ReactMarkdown>
+                ) : typeof item.content === 'string' ? (
+                  <ReactMarkdown>{item.content}</ReactMarkdown>
+                ) : (
+                  <ReactMarkdown>{item.description || item.content}</ReactMarkdown>
+                )}
+              </div>
             </div>
           </MediaCard>
         ))}
@@ -319,7 +333,13 @@ export default function Section({ activeSection, sections, voices, media, partne
               </div>
             </div>
             <div className="category">{partner.category}</div>
-            <TinaMarkdown content={partner.description} />
+            {typeof partner.description === 'string' ? (
+              <ReactMarkdown>{partner.description}</ReactMarkdown>
+            ) : typeof partner.content === 'string' ? (
+              <ReactMarkdown>{partner.content}</ReactMarkdown>
+            ) : (
+              <ReactMarkdown>{partner.description || partner.content}</ReactMarkdown>
+            )}
           </PartnerCard>
         ))}
       </PartnersGrid>
@@ -338,7 +358,11 @@ export default function Section({ activeSection, sections, voices, media, partne
       {renderStats()}
       
       <Content>
-        <TinaMarkdown content={currentSection.content} />
+        {typeof currentSection.content === 'string' ? (
+          <ReactMarkdown>{currentSection.content}</ReactMarkdown>
+        ) : (
+          <ReactMarkdown>{currentSection.content}</ReactMarkdown>
+        )}
       </Content>
       
       {activeSection === 'elder-voices' && renderVoices('elder')}

@@ -1,20 +1,11 @@
 import { useState } from 'react'
 import WikiLayout from '../components/WikiLayout'
 import Section from '../components/Section'
-import { useTina } from 'tinacms/dist/react'
-import { client } from '../tina/__generated__/client'
 
 export default function Home(props) {
   const [activeSection, setActiveSection] = useState('program-overview')
   
-  // Use TinaCMS data if available, fallback to static data
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  })
-  
-  // Use file-based content if available, otherwise fall back to static data
+  // Use Keystatic content or fallback to static data
   const sections = props.sections?.length > 0 ? props.sections : staticData.sections
   const voices = props.voices?.length > 0 ? props.voices : staticData.voices
   const media = props.media?.length > 0 ? props.media : staticData.media
@@ -39,54 +30,45 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-  // Import content functions dynamically
-  const { getVoices, getPartners, getMedia, getSections, getSettings } = await import('../lib/content')
+  // Import Keystatic reader functions
+  const { getSections, getVoices, getMedia, getPartners, getSettings } = await import('../lib/keystatic-reader')
   
   try {
-    // Try to get data from TinaCMS
-    const tinaProps = await client.queries.postConnection()
-    
-    // Also load file-based content as fallback
-    const voices = getVoices()
-    const partners = getPartners()
-    const media = getMedia()
-    const sections = getSections()
-    const settings = getSettings()
+    // Load content from Keystatic
+    const sections = await getSections()
+    const voices = await getVoices()
+    const media = await getMedia()
+    const partners = await getPartners()
+    const settings = await getSettings()
     
     return {
       props: {
-        data: tinaProps.data,
-        query: tinaProps.query,
-        variables: tinaProps.variables,
-        // Add file-based content
-        voices,
-        partners,
-        media,
+        // Keystatic content
         sections,
+        voices,
+        media,
+        partners,
         settings,
+        // Keep legacy structure for compatibility
+        data: {},
+        query: '',
+        variables: {},
       },
     }
   } catch (error) {
-    // Fallback to file-based content if TinaCMS isn't available
-    console.log('TinaCMS not available, using file-based content')
+    console.log('Keystatic not available, using fallback content:', error)
     
-    const voices = getVoices()
-    const partners = getPartners()
-    const media = getMedia()
-    const sections = getSections()
-    const settings = getSettings()
-    
+    // Fallback to existing static data if Keystatic fails
     return {
       props: {
         data: {},
         query: '',
         variables: {},
-        // Use file-based content
-        voices,
-        partners,
-        media,
-        sections,
-        settings,
+        sections: staticData.sections || [],
+        voices: staticData.voices || [],
+        media: staticData.media || [],
+        partners: staticData.partners || [],
+        settings: staticSettings,
       },
     }
   }

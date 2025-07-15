@@ -3,21 +3,25 @@
   "version": "1.0.0",
   "description": "BAIL Program Wiki with TinaCMS for easy content management",
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
+    "dev": "next dev",
     "build": "next build",
-    "build:tina": "tinacms build && next build",
-    "start": "next start"
+    "start": "next start",
+    "keystatic": "next dev"
   },
   "dependencies": {
+    "@keystatic/core": "^0.5.47",
+    "@keystatic/next": "^5.0.4",
+    "@sanity/client": "^7.6.0",
+    "@sanity/image-url": "^1.1.0",
     "@tinacms/auth": "^1.0.0",
-    "@tinacms/cli": "^1.5.30",
     "@tinacms/datalayer": "^1.2.30",
     "gray-matter": "^4.0.3",
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.0",
-    "tinacms": "^1.5.30"
+    "react-markdown": "^10.1.0",
+    "sanity": "^3.99.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

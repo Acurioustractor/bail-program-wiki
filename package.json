@@ -4,10 +4,8 @@
   "description": "BAIL Program Wiki with TinaCMS for easy content management",
   "scripts": {
     "dev": "tinacms dev -c \"next dev\"",
-    "build": "next build",
-    "build:tina": "tinacms build && next build",
-    "start": "next start",
-    "export": "next build && next export"
+    "build": "tinacms build && next build",
+    "start": "tinacms build && next start"
   },
   "dependencies": {
     "next": "^14.0.0",

@@ -1,18 +1,9 @@
 import { useState } from 'react'
 import WikiLayout from '../components/WikiLayout'
 import Section from '../components/Section'
-import { useTina } from 'tinacms/dist/react'
-import { client } from '../tina/__generated__/client'
 
 export default function Home(props) {
   const [activeSection, setActiveSection] = useState('program-overview')
-  
-  // Use TinaCMS data if available, fallback to static data
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  })
   
   // Use static data for now (TinaCMS integration will be added gradually)
   const sections = staticData.sections
@@ -36,25 +27,6 @@ export default function Home(props) {
       />
     </WikiLayout>
   )
-}
-
-export const getStaticProps = async () => {
-  try {
-    const tinaProps = await client.queries.homeQuery()
-    
-    return {
-      props: {
-        ...tinaProps,
-        // Fallback for development
-      },
-    }
-  } catch (error) {
-    // Fallback if TinaCMS isn't available
-    console.log('TinaCMS not available, using static data')
-    return {
-      props: {},
-    }
-  }
 }
 
 // EXACT content from original HTML file - bail-program-wiki-full.html

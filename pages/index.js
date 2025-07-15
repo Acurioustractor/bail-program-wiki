@@ -37,7 +37,7 @@ export default function Home(props) {
   )
 }
 
-// Static data fallback
+// Static data fallback with all rich content
 const staticData = {
   sections: [
     {
@@ -56,7 +56,9 @@ const staticData = {
             children: [
               { type: 'text', text: 'The ' },
               { type: 'text', text: 'Be An Indigenous Leader (BAIL) Program', bold: true },
-              { type: 'text', text: ' is a transformative 10-day wilderness camp experience designed specifically for Indigenous youth aged 12-17. Rooted in the CAMPFIRE strategic framework, our program combines traditional Indigenous knowledge with modern leadership development.' }
+              { type: 'text', text: ' is a transformative 10-day wilderness camp experience designed specifically for Indigenous youth aged 12-17. Rooted in the ' },
+              { type: 'text', text: 'CAMPFIRE', bold: true },
+              { type: 'text', text: ' strategic framework, our program combines traditional Indigenous knowledge with modern leadership development to create lasting positive change in participants\' lives.' }
             ]
           },
           {
@@ -66,6 +68,67 @@ const staticData = {
           {
             type: 'p',
             children: [{ type: 'text', text: 'To empower Indigenous youth through culturally-grounded leadership development, fostering resilience, identity, and community connection in a supportive wilderness environment.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Program Highlights' }]
+          },
+          {
+            type: 'ul',
+            children: [
+              { type: 'li', children: [{ type: 'text', text: '10-day intensive wilderness experience' }] },
+              { type: 'li', children: [{ type: 'text', text: 'Cultural immersion and traditional teachings' }] },
+              { type: 'li', children: [{ type: 'text', text: 'Leadership skill development' }] },
+              { type: 'li', children: [{ type: 'text', text: 'Physical fitness and outdoor activities' }] },
+              { type: 'li', children: [{ type: 'text', text: 'Mentorship with Indigenous leaders' }] },
+              { type: 'li', children: [{ type: 'text', text: 'Family and community involvement' }] }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      id: 'campfire-model',
+      title: 'CAMPFIRE Model',
+      sectionId: 'campfire-model',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🔥 The CAMPFIRE Framework' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Our innovative framework combines eight key elements that work together to create transformative experiences for young Indigenous people. Each element of CAMPFIRE works together like the components of a traditional campfire - each piece is essential, and together they create something powerful and transformative.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'The Eight Elements' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'C - Culture' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Deep immersion in traditional practices and knowledge systems. Participants engage with traditional Aboriginal and Torres Strait Islander practices, learning about their cultural heritage, customs, and spiritual connections to Country.' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'A - Ancestral Wisdom' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Learning from Elders and traditional knowledge holders. Direct mentorship from respected Elders who share ancient wisdom, traditional stories, and cultural protocols that have been passed down through generations.' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'M - Mentoring' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'One-on-one guidance from culturally strong role models. Individualized support from Indigenous mentors who understand the challenges young people face and can provide culturally appropriate guidance.' }]
           }
         ]
       }
@@ -75,55 +138,189 @@ const staticData = {
       title: 'Impact Statistics', 
       sectionId: 'impact-stats',
       stats: [
-        { number: '500+', label: 'Youth Served' },
-        { number: '85%', label: 'Completion Rate' },
-        { number: '92%', label: 'Report Improved Confidence' },
-        { number: '78%', label: 'Continue in Leadership Roles' },
-        { number: '15', label: 'Partner Communities' },
-        { number: '10', label: 'Years Running' }
+        { number: '85%', label: 'Program Completion Rate' },
+        { number: '70%', label: 'Education Re-engagement' },
+        { number: '30%', label: 'Reduction in Police Contacts' },
+        { number: '95%', label: 'Improved Family Relationships' }
       ],
       content: {
         type: 'root',
         children: [
           {
             type: 'h1',
-            children: [{ type: 'text', text: 'Measuring Our Impact' }]
+            children: [{ type: 'text', text: '📊 Measuring Success' }]
           },
           {
             type: 'p',
-            children: [{ type: 'text', text: 'The BAIL Program has achieved remarkable success since its inception, with measurable outcomes that demonstrate the power of culturally-grounded programming.' }]
+            children: [{ type: 'text', text: 'The BAIL Program tracks both quantitative outcomes and qualitative cultural indicators to understand the full impact of our work. Our evaluation combines Western measurement tools with Indigenous evaluation practices to provide a complete picture of transformation.' }]
+          },
+          {
+            type: 'h2',
+            children: [{ type: 'text', text: 'Long-term Outcomes' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'Immediate (0-6 months)' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Increased cultural knowledge, improved fitness levels, stronger mentor relationships, enhanced self-esteem and confidence.' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'Medium-term (6-18 months)' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Reduced involvement with justice system, educational re-engagement, improved family relationships, leadership roles in community.' }]
+          },
+          {
+            type: 'h3',
+            children: [{ type: 'text', text: 'Long-term (18+ months)' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Sustainable lifestyle changes, community leadership roles, cultural ambassadorship, mentoring other young people.' }]
           }
         ]
       }
     }
   ],
   voices: [
+    // Elder Voices
     {
-      name: 'Elder Mary Whitehorse',
-      role: 'Traditional Knowledge Keeper',
+      name: 'Uncle Malcolm',
+      role: 'Kalkadoon Elder & Cultural Advisor',
       category: 'elder',
+      avatar: 'UM',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Country teaches what no classroom can. When these young fellas come out bush with us, they start to understand who they are. The land holds our stories, our laws, our healing. This program, it\'s bringing our kids home to themselves.' }]
+          }
+        ]
+      }
+    },
+    {
+      name: 'Aunty Margaret',
+      role: 'Traditional Knowledge Holder',
+      category: 'elder',
+      avatar: 'AM',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'These young ones, they\'ve been lost in the whitefella world. But when they sit by the fire, listen to the old stories, learn the old ways - that\'s when the healing starts. Brodie, he understands this. He\'s doing good work.' }]
+          }
+        ]
+      }
+    },
+    {
+      name: 'Uncle James',
+      role: 'Cultural Teaching Elder',
+      category: 'elder',
+      avatar: 'UJ',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'The old people, we knew how to raise strong kids. This program, it brings back the old ways - teaching respect, responsibility, connection to Country. The young people, they hungry for this knowledge.' }]
+          }
+        ]
+      }
+    },
+    // Youth Voices
+    {
+      name: 'Jordan T.',
+      role: 'Program Participant, Age 16',
+      category: 'youth',
+      avatar: 'JT',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Before this program, I was angry all the time. Didn\'t know where I belonged. Now I know my mob, my country. Brodie showed me I can be strong without hurting people. I want to help other kids like me now.' }]
+          }
+        ]
+      }
+    },
+    {
+      name: 'Kylie C.',
+      role: 'Program Graduate, Now Youth Mentor',
+      category: 'youth',
+      avatar: 'KC',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'I was in and out of trouble for years. The camps changed everything. Learning to fish with Uncle, hearing the stories around the fire, training with Brodie - it all made sense. Now I\'m helping run the program for other kids.' }]
+          }
+        ]
+      }
+    },
+    {
+      name: 'Marcus W.',
+      role: 'Program Participant, Age 15',
+      category: 'youth',
       avatar: 'MW',
       quote: {
         type: 'root',
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'When I see these young ones come to camp, many have lost their way. But after ten days in the wilderness, learning the old ways alongside the new, they walk taller. They know who they are. The CAMPFIRE framework honors our ancestors while preparing our youth for the modern world.' }]
+            children: [{ type: 'text', text: 'My family was worried about me getting into gangs. The camp showed me there\'s another way to be tough - through culture, through fitness, through helping your people. I\'m proud of who I am now.' }]
           }
         ]
       }
     },
+    // Family Voices
     {
-      name: 'Alex Bear',
-      role: 'Program Graduate, Youth Mentor',
-      category: 'youth',
-      avatar: 'AB',
+      name: 'Sarah M.',
+      role: 'Mother of Program Participant',
+      category: 'family',
+      avatar: 'SM',
       quote: {
         type: 'root',
         children: [
           {
             type: 'p',
-            children: [{ type: 'text', text: 'Before BAIL, I felt disconnected from my culture and struggled with confidence. The program changed everything. Learning traditional skills while developing leadership abilities showed me I could be proud of who I am while achieving my dreams.' }]
+            children: [{ type: 'text', text: 'I didn\'t know my son anymore before this program. He was angry, getting into trouble. After the camps, he started talking to me again, helping around the house. He found himself out there on Country.' }]
+          }
+        ]
+      }
+    },
+    {
+      name: 'David K.',
+      role: 'Father and Community Leader',
+      category: 'family',
+      avatar: 'DK',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'This program gives our kids what we sometimes can\'t - connection to their culture in a strong, positive way. Brodie and the Elders, they\'re doing what we all wish we could do for our young people.' }]
+          }
+        ]
+      }
+    },
+    {
+      name: 'Linda T.',
+      role: 'Grandmother and Traditional Owner',
+      category: 'family',
+      avatar: 'LT',
+      quote: {
+        type: 'root',
+        children: [
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'My grandson came back from camp different. He wanted to learn language, asked me about the old stories. For the first time in years, he was proud to be blackfella. That\'s worth everything.' }]
           }
         ]
       }
@@ -169,23 +366,24 @@ const staticSettings = {
 }
 
 export const getStaticProps = async () => {
-  try {
-    const tinaProps = await client.queries.homeQuery()
-    return {
-      props: {
-        ...tinaProps,
-      },
-    }
-  } catch (error) {
-    // Fallback if TinaCMS is not available
-    return {
-      props: {
-        data: {
-          sectionConnection: { edges: [] },
-          voiceConnection: { edges: [] },
-          mediaConnection: { edges: [] },
-          partnerConnection: { edges: [] },
-          settingsConnection: { edges: [] }
+  // For now, just return static data until TinaCMS is properly configured
+  return {
+    props: {
+      data: {
+        sectionConnection: { 
+          edges: staticData.sections.map(section => ({ node: section }))
+        },
+        voiceConnection: { 
+          edges: staticData.voices.map(voice => ({ node: voice }))
+        },
+        mediaConnection: { 
+          edges: staticData.media.map(item => ({ node: item }))
+        },
+        partnerConnection: { 
+          edges: staticData.partners.map(partner => ({ node: partner }))
+        },
+        settingsConnection: { 
+          edges: [{ node: staticSettings }]
         }
       }
     }

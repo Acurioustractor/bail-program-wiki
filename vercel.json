@@ -3,17 +3,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
-  "env": {
-    "NEXT_PUBLIC_TINA_CLIENT_ID": "@tina_client_id",
-    "TINA_TOKEN": "@tina_token",
-    "NEXT_PUBLIC_EDIT_BRANCH": "main"
-  },
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_TINA_CLIENT_ID": "@tina_client_id",
-      "TINA_TOKEN": "@tina_token"
-    }
-  },
   "functions": {
     "pages/api/**/*.js": {
       "memory": 1024

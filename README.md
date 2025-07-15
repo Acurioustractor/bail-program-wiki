@@ -1,4 +1,4 @@
-# BAIL Program Wiki with TinaCMS
+# BAIL Program Wiki with Keystatic CMS
 
 A modern, content-manageable wiki for the Be An Indigenous Leader (BAIL) Program, built with Next.js and TinaCMS.
 

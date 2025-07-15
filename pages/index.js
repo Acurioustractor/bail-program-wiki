@@ -1,8 +1,43 @@
 import { useState } from 'react'
+import { client } from '../tina/__generated__/client'
+import { useTina } from 'tinacms/dist/react'
 import WikiLayout from '../components/WikiLayout'
 import Section from '../components/Section'
 
-// Static data for deployment
+export default function Home(props) {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  })
+  
+  const [activeSection, setActiveSection] = useState('program-overview')
+  
+  // Get all sections from data, fallback to static data
+  const sections = data?.sectionConnection?.edges?.map(edge => edge.node) || staticData.sections
+  const voices = data?.voiceConnection?.edges?.map(edge => edge.node) || staticData.voices
+  const media = data?.mediaConnection?.edges?.map(edge => edge.node) || staticData.media
+  const partners = data?.partnerConnection?.edges?.map(edge => edge.node) || staticData.partners
+  const settings = data?.settingsConnection?.edges?.[0]?.node || staticSettings
+
+  return (
+    <WikiLayout 
+      activeSection={activeSection}
+      setActiveSection={setActiveSection}
+      settings={settings}
+    >
+      <Section 
+        activeSection={activeSection}
+        sections={sections}
+        voices={voices}
+        media={media}
+        partners={partners}
+      />
+    </WikiLayout>
+  )
+}
+
+// Static data fallback
 const staticData = {
   sections: [
     {
@@ -128,27 +163,31 @@ const staticData = {
   ]
 }
 
-const settings = {
+const staticSettings = {
   siteTitle: 'BAIL Program Wiki',
   siteSubtitle: 'Be An Indigenous Leader Program'
 }
 
-export default function Home() {
-  const [activeSection, setActiveSection] = useState('program-overview')
-
-  return (
-    <WikiLayout 
-      activeSection={activeSection}
-      setActiveSection={setActiveSection}
-      settings={settings}
-    >
-      <Section 
-        activeSection={activeSection}
-        sections={staticData.sections}
-        voices={staticData.voices}
-        media={staticData.media}
-        partners={staticData.partners}
-      />
-    </WikiLayout>
-  )
+export const getStaticProps = async () => {
+  try {
+    const tinaProps = await client.queries.homeQuery()
+    return {
+      props: {
+        ...tinaProps,
+      },
+    }
+  } catch (error) {
+    // Fallback if TinaCMS is not available
+    return {
+      props: {
+        data: {
+          sectionConnection: { edges: [] },
+          voiceConnection: { edges: [] },
+          mediaConnection: { edges: [] },
+          partnerConnection: { edges: [] },
+          settingsConnection: { edges: [] }
+        }
+      }
+    }
+  }
 }

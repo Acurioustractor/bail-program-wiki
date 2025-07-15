@@ -9,8 +9,8 @@ export default function AdminPage() {
           <li><strong>Run TinaCMS locally:</strong> 
             <br /><code style={{ background: '#f1f1f1', padding: '0.2rem 0.5rem', borderRadius: '3px' }}>cd "/Users/benknight/BG fit/bail-program-cms" && npm run dev</code>
           </li>
-          <li><strong>Open your local site:</strong> Go to <code>http://localhost:3000</code></li>
-          <li><strong>Navigate to admin:</strong> Go to <code>http://localhost:3000/admin/index.html</code></li>
+          <li><strong>Open your local site:</strong> Go to <code>http://localhost:3001</code></li>
+          <li><strong>Navigate to admin:</strong> Go to <code>http://localhost:3001/admin/index.html</code></li>
           <li><strong>Login with GitHub:</strong> Use the same GitHub account connected to your repo</li>
           <li><strong>This completes step 3</strong> in your TinaCMS dashboard checklist</li>
         </ol>

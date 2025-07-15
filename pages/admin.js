@@ -5,14 +5,14 @@ export default function AdminPage() {
   const router = useRouter()
   
   useEffect(() => {
-    // Redirect to the TinaCMS admin interface
-    router.push('/admin/index.html')
+    // Redirect to the working custom editor
+    router.push('/editor')
   }, [router])
 
   return (
     <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Redirecting to TinaCMS Admin...</h1>
-      <p>If you're not redirected automatically, <a href="/admin/index.html">click here</a></p>
+      <h1>Redirecting to Content Editor...</h1>
+      <p>If you're not redirected automatically, <a href="/editor">click here</a></p>
     </div>
   )
 }

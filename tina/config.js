@@ -97,6 +97,163 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "voice",
+        label: "Community Voices",
+        path: "content/voices",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Person's Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "role",
+            label: "Role/Title",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "category",
+            label: "Category",
+            options: ["elder", "youth", "family", "partner"],
+            required: true,
+          },
+          {
+            type: "string",
+            name: "avatar",
+            label: "Avatar Initials",
+          },
+          {
+            type: "rich-text",
+            name: "quote",
+            label: "Quote/Testimonial",
+            isBody: true,
+          },
+        ],
+      },
+      {
+        name: "partner",
+        label: "Partners & Team",
+        path: "content/partners",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "role",
+            label: "Role/Position",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "category",
+            label: "Category",
+            options: ["team", "community", "funding", "cultural"],
+            required: true,
+          },
+          {
+            type: "string",
+            name: "organization",
+            label: "Organization",
+          },
+          {
+            type: "string",
+            name: "avatar",
+            label: "Avatar Initials",
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Description",
+            isBody: true,
+          },
+        ],
+      },
+      {
+        name: "media",
+        label: "Media Gallery",
+        path: "content/media",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Media Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "type",
+            label: "Media Type",
+            options: ["video", "photo", "audio"],
+            required: true,
+          },
+          {
+            type: "string",
+            name: "category",
+            label: "Category",
+            options: ["cultural-learning", "graduation", "camp-activities", "testimonials", "ceremonies"],
+          },
+          {
+            type: "image",
+            name: "thumbnail",
+            label: "Thumbnail Image",
+          },
+          {
+            type: "string",
+            name: "url",
+            label: "Media URL",
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Description",
+            isBody: true,
+          },
+        ],
+      },
+      {
+        name: "settings",
+        label: "Site Settings",
+        path: "content/settings",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "siteTitle",
+            label: "Site Title",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "siteSubtitle",
+            label: "Site Subtitle",
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Site Description",
+          },
+        ],
+      },
     ],
   },
 });

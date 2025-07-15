@@ -363,7 +363,8 @@ function getSectionIcon(sectionId) {
   const icons = {
     'program-overview': '🏕️',
     'campfire-model': '🔥',
-    'impact-stats': '📊',
+    'impact-statistics': '📊',
+    'community-voices': '🗣️',
     'elder-voices': '👵',
     'youth-perspectives': '🧑',
     'family-impacts': '👨‍👩‍👧‍👦',

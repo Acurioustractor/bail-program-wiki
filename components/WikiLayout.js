@@ -143,7 +143,7 @@ const menuSections = [
     items: [
       { id: 'program-overview', label: 'Program Overview', icon: '🎯' },
       { id: 'campfire-model', label: 'CAMPFIRE Model', icon: '🔥' },
-      { id: 'impact-stats', label: 'Impact & Statistics', icon: '📊' }
+      { id: 'impact-statistics', label: 'Impact & Statistics', icon: '📊' }
     ]
   },
   {

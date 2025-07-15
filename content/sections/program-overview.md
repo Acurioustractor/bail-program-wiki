@@ -1,37 +1,45 @@
 ---
-title: "Program Overview"
-sectionId: "program-overview"
-icon: "🏕️"
+title: Program Overview
+sectionId: program-overview
+icon: 🎯
+stats:
+  - number: "10"
+    label: "Camps Conducted Across 5 Locations"
+  - number: "400"
+    label: "Young Indigenous Men Directly Impacted"
+  - number: "4 Years"
+    label: "Proven Track Record of Success"
+  - number: "$200k"
+    label: "Total Project Investment (2025 Initiative)"
 ---
 
-# Welcome to the BAIL Program
+# 🎯 Mission Statement
 
-The **Be An Indigenous Leader (BAIL) Program** is a transformative 10-day wilderness camp experience designed specifically for Indigenous youth aged 12-17. Rooted in the **CAMPFIRE** strategic framework, our program combines traditional Indigenous knowledge with modern leadership development to create lasting positive change in participants' lives.
+**The BAIL (Be An Indigenous Leader) Program**, delivered through the innovative CAMPFIRE model, represents a transformative approach to addressing youth crime and disconnection among Aboriginal and Torres Strait Islander young people in Mount Isa and Doomadgee.
 
-## Our Mission
+Led by Brodie Germaine Fitness (BG Fit), this culturally-grounded initiative combines the healing power of Country with fitness, mentoring, and Elder guidance to break cycles of disadvantage and empower young Indigenous leaders.
 
-To empower Indigenous youth through culturally-grounded leadership development, fostering resilience, identity, and community connection in a supportive wilderness environment.
+## 🔥 The CAMPFIRE Model
 
-## Program Highlights
+Our innovative framework combines eight key elements that work together to create transformative experiences for young Indigenous people.
 
-- **10-day intensive wilderness experience**
-- **Cultural immersion and traditional teachings**
-- **Leadership skill development**
-- **Physical fitness and outdoor activities**
-- **Mentorship with Indigenous leaders**
-- **Family and community involvement**
+### C - Culture: Deep immersion in traditional practices
 
-## The CAMPFIRE Framework
+### A - Ancestral Wisdom: Learning from Elders
 
-Our program is built on eight core pillars:
+### M - Mentoring: One-on-one guidance
 
-- **C**ulture - Connecting youth to their Indigenous heritage
-- **A**ncestral Wisdom - Learning from traditional knowledge
-- **M**entoring - Guidance from Indigenous leaders
-- **P**ersonal Growth - Individual development journey
-- **F**itness - Physical health and outdoor skills
-- **I**dentity - Strengthening cultural identity
-- **R**esilience - Building strength to overcome challenges
-- **E**mpowerment - Developing leadership capabilities
+### P - Personal Growth: Individual development
 
-Each element works together to create a holistic experience that addresses the whole person - mind, body, and spirit.
+### F - Fitness: Physical foundation
+
+### I - Identity: Cultural identity
+
+### R - Resilience: Overcoming challenges
+
+### E - Empowerment: Leadership development
+
+## 📺 Brodie's Story - Program Introduction
+
+Brodie shares his vision for the BAIL Program and the importance of connection to Country.
+EOF < /dev/null

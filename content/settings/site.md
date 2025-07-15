@@ -1,6 +1,8 @@
 ---
-siteTitle: "BAIL Program Wiki"
-siteSubtitle: "Be An Indigenous Leader Program"
-campfireSubtitle: "Culture • Ancestral Wisdom • Mentoring • Personal Growth • Fitness • Identity • Resilience • Empowerment"
-footerText: "© 2024 BAIL Program Foundation. Empowering Indigenous youth through culturally-grounded leadership development."
+siteTitle: BAIL Program Wiki
+siteSubtitle: Be An Indigenous Leader Program
+campfireSubtitle: Culturally-grounded youth development program
 ---
+
+Welcome to the BAIL Program Wiki. This site documents our work with Aboriginal and Torres Strait Islander young people.
+EOF < /dev/null

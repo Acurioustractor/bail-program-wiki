@@ -3,53 +3,45 @@ title: "Impact Statistics"
 sectionId: "impact-stats"
 icon: "📊"
 stats:
-  - number: "500+"
-    label: "Youth Served"
   - number: "85%"
-    label: "Completion Rate"
-  - number: "92%"
-    label: "Report Improved Confidence"
-  - number: "78%"
-    label: "Continue in Leadership Roles"
-  - number: "15"
-    label: "Partner Communities"
-  - number: "10"
-    label: "Years Running"
+    label: "Program Completion Rate"
+  - number: "70%"
+    label: "Education Re-engagement"
+  - number: "30%"
+    label: "Reduction in Police Contacts"
+  - number: "95%"
+    label: "Improved Family Relationships"
 ---
 
-# Measuring Our Impact
+# 📊 Measuring Success
 
-The BAIL Program has achieved remarkable success since its inception, with measurable outcomes that demonstrate the power of culturally-grounded programming.
+The BAIL Program tracks both quantitative outcomes and qualitative cultural indicators to understand the full impact of our work. Our evaluation combines Western measurement tools with Indigenous evaluation practices to provide a complete picture of transformation.
 
-## Key Achievements
+## Key Statistics
 
-Our comprehensive evaluation shows significant improvements across all CAMPFIRE dimensions:
+Our data demonstrates significant positive outcomes across all areas of youth development:
 
-### Academic & Educational Outcomes
-- **73%** increase in school engagement
-- **68%** improvement in academic performance
-- **81%** report stronger connection to education
+- **85% Program Completion Rate** - High retention shows strong engagement
+- **70% Education Re-engagement** - Youth return to or continue schooling
+- **30% Reduction in Police Contacts** - Decreased involvement with justice system
+- **95% Improved Family Relationships** - Stronger family bonds and communication
 
-### Mental Health & Wellbeing
-- **85%** report improved self-esteem
-- **79%** show decreased anxiety levels
-- **88%** demonstrate improved emotional regulation
+## Long-term Outcomes
 
-### Cultural Connection
-- **94%** report stronger cultural identity
-- **89%** increased knowledge of traditional practices
-- **91%** express pride in Indigenous heritage
+### Immediate (0-6 months)
+Increased cultural knowledge, improved fitness levels, stronger mentor relationships, enhanced self-esteem and confidence.
 
-### Community Engagement
-- **76%** become active in community initiatives
-- **82%** take on leadership roles in their communities
-- **69%** mentor other youth post-program
+### Medium-term (6-18 months)  
+Reduced involvement with justice system, educational re-engagement, improved family relationships, leadership roles in community.
 
-## Long-term Impact
+### Long-term (18+ months)
+Sustainable lifestyle changes, community leadership roles, cultural ambassadorship, mentoring other young people.
 
-Follow-up studies conducted 2-3 years post-program show sustained positive outcomes:
+## Cultural Indicators
 
-- Participants are **3x more likely** to pursue post-secondary education
-- **87%** maintain strong cultural connections
-- **74%** continue to be involved in community leadership
-- **92%** would recommend the program to other youth
+Beyond Western metrics, we measure:
+- **Strengthened cultural identity** - Connection to Indigenous heritage
+- **Language engagement** - Interest in traditional languages
+- **Cultural practice participation** - Involvement in ceremonies and traditions
+- **Community leadership** - Taking on cultural responsibilities
+- **Intergenerational relationships** - Stronger connections with Elders

@@ -4,36 +4,58 @@ sectionId: "campfire-model"
 icon: "🔥"
 ---
 
-# The CAMPFIRE Strategic Framework
+# 🔥 The CAMPFIRE Framework
 
-The CAMPFIRE model is the foundation of the BAIL Program, representing eight interconnected pillars that address the holistic development of Indigenous youth.
+Our innovative framework combines eight key elements that work together to create transformative experiences for young Indigenous people. Each element of CAMPFIRE works together like the components of a traditional campfire - each piece is essential, and together they create something powerful and transformative.
 
-## The Eight Pillars
+## The Eight Elements
 
-### 🏛️ **Culture**
-Connecting youth to their Indigenous heritage through traditional ceremonies, storytelling, and cultural practices. Participants learn about their ancestral traditions and develop pride in their cultural identity.
+### **C** - Culture
+**Deep immersion in traditional practices and knowledge systems**
 
-### 👴 **Ancestral Wisdom**
-Learning from traditional knowledge systems and the teachings of Elders. This pillar ensures that ancient wisdom is passed down to the next generation while being applied to modern challenges.
+Participants engage with traditional Aboriginal and Torres Strait Islander practices, learning about their cultural heritage, customs, and spiritual connections to Country.
 
-### 🤝 **Mentoring**
-Guidance from Indigenous leaders, Elders, and successful community members. Each participant is paired with mentors who provide ongoing support and role modeling.
+### **A** - Ancestral Wisdom  
+**Learning from Elders and traditional knowledge holders**
 
-### 🌱 **Personal Growth**
-Individual development journey focusing on self-awareness, goal-setting, and personal responsibility. Youth explore their strengths and develop life skills.
+Direct mentorship from respected Elders who share ancient wisdom, traditional stories, and cultural protocols that have been passed down through generations.
 
-### 💪 **Fitness**
-Physical health and outdoor activities including traditional games, wilderness skills, and modern fitness practices. Building strong bodies and healthy lifestyle habits.
+### **M** - Mentoring
+**One-on-one guidance from culturally strong role models**
 
-### 🪶 **Identity**
-Strengthening cultural identity and sense of belonging within the Indigenous community. Youth develop a strong understanding of who they are and where they come from.
+Individualized support from Indigenous mentors who understand the challenges young people face and can provide culturally appropriate guidance.
 
-### 🛡️ **Resilience**
-Building strength to overcome challenges and bounce back from adversity. Developing coping strategies and emotional regulation skills.
+### **P** - Personal Growth
+**Individual development and self-discovery**
 
-### ⚡ **Empowerment**
-Developing leadership capabilities and confidence to create positive change in their communities. Youth become agents of transformation.
+Fostering self-awareness, confidence, and personal development through structured activities and reflective practices.
 
-## How CAMPFIRE Works
+### **F** - Fitness
+**Physical health as foundation for overall wellness**
 
-Each element of CAMPFIRE is woven throughout the 10-day program experience, creating a comprehensive approach to youth development that honors Indigenous values while preparing youth for success in the modern world.
+Comprehensive fitness programs that build physical strength, endurance, and overall health as a foundation for mental and emotional wellbeing.
+
+### **I** - Identity
+**Strengthening cultural identity and sense of belonging**
+
+Helping young people understand and embrace their Indigenous identity, fostering pride in their heritage and sense of belonging to community.
+
+### **R** - Resilience
+**Building capacity to overcome challenges and trauma**
+
+Developing coping strategies, emotional regulation skills, and the inner strength to overcome adversity and break cycles of disadvantage.
+
+### **E** - Empowerment
+**Developing leadership and community contribution capacity**
+
+Fostering leadership skills, community engagement, and the confidence to make positive contributions to family and community.
+
+## The CAMPFIRE Method
+
+Like a traditional campfire that brings people together for warmth, light, and connection, our framework creates a sacred space where young Indigenous people can:
+
+- **Reconnect** with their cultural heritage and identity
+- **Heal** from trauma and disconnection  
+- **Learn** from Elders and traditional knowledge
+- **Grow** in confidence and capability
+- **Transform** their lives and communities

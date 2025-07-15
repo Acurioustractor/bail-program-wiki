@@ -176,6 +176,295 @@ const staticData = {
           }
         ]
       }
+    },
+    // ADD ALL MISSING SECTIONS HERE
+    {
+      id: 'elder-voices',
+      title: 'Elder Voices',
+      sectionId: 'elder-voices',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '👵 Elder Wisdom & Guidance' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Our Elders provide the cultural foundation and wisdom that guides everything we do. Their voices carry the authority of tradition and the power of lived experience. They are the cornerstone of our program cultural integrity.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'youth-perspectives',
+      title: 'Youth Perspectives',
+      sectionId: 'youth-perspectives',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🧑 Young Voices' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'The young people who participate in our program are the real proof of its effectiveness. Their stories of transformation inspire us and guide our approach. These are their voices, their journeys, their truth.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'family-impacts',
+      title: 'Family Impacts',
+      sectionId: 'family-impacts',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '👨‍👩‍👧‍👦 Family Voices' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'The program impact extends beyond individual participants to their families and communities. Parents and siblings witness profound changes that strengthen family bonds and restore hope for the future.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'success-stories',
+      title: 'Success Stories',
+      sectionId: 'success-stories',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '⭐ Celebrating Success' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Every youth who participates in the BAIL Program has a unique story of growth, resilience, and achievement.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'video-gallery',
+      title: 'Video Gallery',
+      sectionId: 'video-gallery',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🎥 Video Stories' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Watch powerful stories from BAIL Program participants, families, and community members.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'photo-gallery',
+      title: 'Photo Gallery',
+      sectionId: 'photo-gallery',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '📷 Photo Memories' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Explore visual stories from BAIL Program camps and activities.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'audio-stories',
+      title: 'Audio Stories',
+      sectionId: 'audio-stories',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🎵 Audio Stories & Teachings' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Listen to traditional stories, songs, and teachings from Elders and community members.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'documents',
+      title: 'Documents',
+      sectionId: 'documents',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '📄 Program Documents' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Access important program materials, research, and resources.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'network-partners',
+      title: 'Network Partners',
+      sectionId: 'network-partners',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🤝 Our Network Partners' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Meet the dedicated team members and collaborators who make the BAIL Program possible.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'community-partners',
+      title: 'Community Partners',
+      sectionId: 'community-partners',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🏘️ Community Partners' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Discover the Indigenous communities and organizations that support the BAIL Program.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'funding-partners',
+      title: 'Funding Partners',
+      sectionId: 'funding-partners',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '💰 Funding Partners' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Learn about the organizations and foundations that invest in Indigenous youth development.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'cultural-advisors',
+      title: 'Cultural Advisors',
+      sectionId: 'cultural-advisors',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🌟 Cultural Advisors' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Meet the Elders and cultural leaders who guide the BAIL Program.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'current-programs',
+      title: 'Current Programs',
+      sectionId: 'current-programs',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '🎯 Current Programs' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Explore the active BAIL Program offerings and initiatives.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'upcoming-camps',
+      title: 'Upcoming Camps',
+      sectionId: 'upcoming-camps',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '📅 Upcoming Camps' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Stay informed about future BAIL Program camp opportunities.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'locations',
+      title: 'Locations',
+      sectionId: 'locations',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '📍 Program Locations' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Learn about the beautiful and culturally significant locations where BAIL Programs take place.' }]
+          }
+        ]
+      }
+    },
+    {
+      id: 'evaluation',
+      title: 'Evaluation',
+      sectionId: 'evaluation',
+      content: {
+        type: 'root',
+        children: [
+          {
+            type: 'h1',
+            children: [{ type: 'text', text: '📈 Program Evaluation' }]
+          },
+          {
+            type: 'p',
+            children: [{ type: 'text', text: 'Discover how we measure success and continuously improve the BAIL Program.' }]
+          }
+        ]
+      }
     }
   ],
   voices: [
